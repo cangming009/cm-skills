@@ -5,6 +5,7 @@ Personal Claude Code skill collection.
 ## Skills
 
 - **[tools-update-news-deploy](skills/tools-update-news-deploy/skill.md)** — Deploy Vite + React project to Vercel, including DNS config, GitHub Actions CI/CD, and common pitfalls.
+- **[mini-wechat-dev](skills/mini-wechat-dev/skill.md)** — 微信小程序 + 云开发工作流。专用于带云函数/云数据库的小程序项目，涵盖云函数部署、数据库集合创建、seed 数据、CLI 操作等。
 
 ## Usage
 
