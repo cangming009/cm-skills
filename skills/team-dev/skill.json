@@ -1,0 +1,14 @@
+{
+  "name": "team-dev",
+  "description": "Agent Teams 协作技能。自动识别项目，更新 CLAUDE.md 规则。\n\n## 协作规则\n- team_leader: 任务分配、进度追踪、关键决策\n- coder: 代码实现、完成后通知 reviewer\n- reviewer: 代码审查、提出改进建议、确认后批准\n\n## 通信规则\n- 任务开始 → SendMessage broadcast\n- 任务完成 → SendMessage 通知下一角色\n- 遇到问题 → broadcast + 私聊\n- 代码审查 → 私聊 coder\n\n## 工作流程\n```\n1. team_leader: TaskList → TaskUpdate 分配任务\n2. coder: 开始编码 → SendMessage \"完成\"\n3. reviewer: 审查代码 → SendMessage \"批准\" 或 \"需修改\"\n```",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "task": {
+        "type": "string",
+        "description": "需要团队处理的任务描述"
+      }
+    },
+    "required": ["task"]
+  }
+}
