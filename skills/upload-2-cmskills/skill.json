@@ -1,0 +1,14 @@
+{
+  "name": "upload-2-cmskills",
+  "description": "上传技能到 cm-skills 仓库。复制本地 skill 目录到 ~/Desktop/claude/cm-skills/skills/ 并 push 到 GitHub。\n\n## 使用方式\n```\nupload-2-cmskills <skill-name>\n```\n\n## 工作流程\n1. 检查 ~/Desktop/claude/cm-skills 是否存在，不存在则 git clone\n2. 从 ~/.claude/skills/<skill-name> 复制到 cm-skills/skills/<skill-name>/\n3. git add → commit → push\n\n## 示例\n```\nSkill: upload-2-cmskills\nArgs: team-dev\n```",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "skill_name": {
+        "type": "string",
+        "description": "技能名称 (目录名)"
+      }
+    },
+    "required": ["skill_name"]
+  }
+}
